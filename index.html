@@ -12,8 +12,8 @@
     </nav>
     <main class="presentacion">
         <section class="presentacion__encriptar">
-            <h1 class="presentacion__titulo">Encriptador/Desencriptador de Texto</h1>
-            <textarea name="texto" id="texto" cols="30" rows="10">Ingrese el texto aquí</textarea>
+            <h1 class="presentacion__encriptar__titulo">Encriptador/Desencriptador de Texto</h1>
+            <textarea class="presentacion__encriptar__areaTexto" name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
             <div class="presentacion__encriptar__advertencia">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
@@ -21,22 +21,20 @@
                 <p class="presentacion__encriptar__advertencia__parrafo">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="presentacion__encriptar__botones">
-                <button onclick="encriptar();" class="presentacion__seccion__botones__encriptar" id="encriptar">Encriptar</button>
-                <button onclick="desencriptar();" class="presentacion__seccion__botones__desencriptar" id="desencriptar">Desencriptar</button>
+                <button onclick="encriptar();" class="presentacion__encriptar__botones__encriptar" id="encriptar">Encriptar</button>
+                <button onclick="desencriptar();" class="presentacion__encriptar__botones__desencriptar" id="desencriptar">Desencriptar</button>
             </div>
         </section>
 
-        <section class="presentacion__desencriptar">
-            <textarea name="texto" id="nuevoTexto" cols="30" rows="10" disabled hidden></textarea>
-            <div class="presentacion__desencriptar__apartado">
+        <section class="presentacion__apartado">
+            <textarea class="presentacion__apartado__areaTexto" name="nuevoTexto" id="nuevoTexto" cols="30" rows="10" hidden ></textarea>
+            <div class="presentacion__apartado__parrafos">
                 <img src="./assets/Muneco.png" alt="Muñeco con lupa">
-                <div class="presentacion__desencriptar__apartado__parrafos">
-                    <p class="presentacion__desencriptar__apartado__parrafos__parrafo1">Ningún mensaje fue encontrado</p>
-                    <p class="presentacion__desencriptar__apartado__parrafos__parrafo2">Ingresa el texto que desees encriptar o desencriptar.</p>
-                </div>
+                <p class="presentacion__apartado__parrafos__parrafo1">Ningún mensaje fue encontrado</p>
+                <p class="presentacion__apartado__parrafos__parrafo2">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <div class="presentacion__desencriptar__boton">
-                <button class="presentacion__desencriptar__boton__copiar" id="copiar" hidden>Copiar</button>
+            <div class="presentacion__apartado__boton">
+                <button class="presentacion__apartado__boton__copiar" id="copiar" >Copiar</button>
             </div>
         </section>
     </main>
@@ -56,5 +54,6 @@
         </div>
     </footer>
 
+    <script src="./js/script.js"></script>
 </body>
 </html>
