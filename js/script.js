@@ -31,19 +31,26 @@ function validarTexto(info) {
     }
 }
 
+//Función para eliminar imagen y párrafos
 function quitarImagenParrafos() {
+    //Elimina la imagen
     document.getElementById("imagenParrafos").style.display = "none";
+    //Da altura al elemento apartado
     document.getElementById("apartado").style.height = "80%";
+    //Da altura al elemento nuevoTexto
     nuevoTexto.style.height = "80%";
+    //Eliminan atributo hidden de nuevoTexto y botón copiar
     nuevoTexto.removeAttribute("hidden");
     btnCopiar.removeAttribute("hidden");
     return;
 }
 
+//Función para encriptar el texto
 function encriptar() {
     let valorTexto = texto.value;
     let mensaje, mensaje1, mensaje2, mensaje3, mensaje4 = "";
     if (validarTexto(valorTexto)) {
+        //Se usa replace para quitar la vocal y poner la vocal encriptada
         mensaje = valorTexto.replace(/e/g, "enter");
         mensaje1 = mensaje.replace(/i/g, "imes");
         mensaje2 = mensaje1.replace(/a/g, "ai");
@@ -56,10 +63,12 @@ function encriptar() {
     return
 }
 
+//Función para desencriptar el texto
 function desencriptar() {
     let valorTexto = texto.value;
     let mensaje, mensaje1, mensaje2, mensaje3, mensaje4 = "";
     if (validarTexto(valorTexto)) {
+        //Se usa replace para quitar la vocal encriptada y poner la vocal
         mensaje = valorTexto.replace(/enter/g, "e");
         mensaje1 = mensaje.replace(/imes/g, "i");
         mensaje2 = mensaje1.replace(/ai/g, "a");
@@ -72,6 +81,7 @@ function desencriptar() {
     return;
 }
 
+//Función para el texto del elemento nuevoTexto
 function copiar() {
     navigator.clipboard.writeText(nuevoTexto.textContent);
     swal("Listo", "Texto copiado", "success");
