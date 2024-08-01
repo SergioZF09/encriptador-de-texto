@@ -35,6 +35,7 @@ body{
     display: flex;
     justify-content: center;
     gap:  50px;
+    margin-bottom: 40px;
 }
 
 .presentacion__encriptar{
@@ -53,6 +54,7 @@ body{
     height: 95%;
     background: var(--color-lightBlue);
     font-size: 16px;
+    font-family: var(--font-family-Montserrat);
     font-weight: 500;
     border: none;
     outline: none;
@@ -84,7 +86,17 @@ body{
 }
 
 .presentacion__encriptar__botones__encriptar,
-.presentacion__encriptar__botones__desencriptar,
+.presentacion__encriptar__botones__desencriptar{
+    width: 328px;
+    height: 50px;
+    background: var(--color-white);
+    color: var(--color-black);
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: var(--font-family-Montserrat);
+    font-weight: 600;
+}
+
 .presentacion__apartado__boton__copiar{
     width: 328px;
     height: 50px;
@@ -94,6 +106,7 @@ body{
     cursor: pointer;
     font-family: var(--font-family-Montserrat);
     font-weight: 600;
+    margin-top: 80px;
 }
 
 .presentacion__encriptar__botones__encriptar:hover,
@@ -118,6 +131,15 @@ body{
     text-align: center;
     border-radius: 32px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.presentacion__apartado__areaTexto{
+    background: var(--color-white);
+    height: 25%;
+    font-size: 16px;
+    font-family: var(--font-family-Montserrat);
+    border: none;
+    outline: none;
 }
 
 .presentacion__apartado__parrafos{
@@ -146,8 +168,7 @@ body{
     justify-content: center;
     padding: 1em 0;
     gap: 50px;
-    margin: auto;
-    margin-top: 60px;
+    margin-top: auto;
 }
 
 .footer__enlaces{

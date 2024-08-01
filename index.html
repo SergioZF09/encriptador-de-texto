@@ -21,20 +21,20 @@
                 <p class="presentacion__encriptar__advertencia__parrafo">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="presentacion__encriptar__botones">
-                <button onclick="encriptar();" class="presentacion__encriptar__botones__encriptar" id="encriptar">Encriptar</button>
-                <button onclick="desencriptar();" class="presentacion__encriptar__botones__desencriptar" id="desencriptar">Desencriptar</button>
+                <button class="presentacion__encriptar__botones__encriptar" id="encriptar" onclick="encriptar();">Encriptar</button>
+                <button class="presentacion__encriptar__botones__desencriptar" id="desencriptar" onclick="desencriptar();">Desencriptar</button>
             </div>
         </section>
 
-        <section class="presentacion__apartado">
-            <textarea class="presentacion__apartado__areaTexto" name="nuevoTexto" id="nuevoTexto" cols="30" rows="10" hidden ></textarea>
-            <div class="presentacion__apartado__parrafos">
+        <section class="presentacion__apartado" id="apartado">
+            <textarea class="presentacion__apartado__areaTexto" name="nuevoTexto" id="nuevoTexto" cols="30" rows="10" disabled hidden></textarea>
+            <div class="presentacion__apartado__parrafos" id="imagenParrafos">
                 <img src="./assets/Muneco.png" alt="Muñeco con lupa">
                 <p class="presentacion__apartado__parrafos__parrafo1">Ningún mensaje fue encontrado</p>
                 <p class="presentacion__apartado__parrafos__parrafo2">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
             <div class="presentacion__apartado__boton">
-                <button class="presentacion__apartado__boton__copiar" id="copiar" >Copiar</button>
+                <button class="presentacion__apartado__boton__copiar" id="copiar" onclick="copiar();" hidden>Copiar</button>
             </div>
         </section>
     </main>
@@ -55,5 +55,6 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
