@@ -7,9 +7,11 @@
     <title>Encriptador de Texto</title>
 </head>
 <body>
-    <nav class="encabezado">
-        <img src="./assets/Logo.png" alt="Logo de Alura Latam">
-    </nav>
+    <header class="encabezado">
+        <nav class="encabezado__nav">
+            <img src="./assets/Logo.png" alt="Logo de Alura Latam">
+        </nav>
+    </header>
     <main class="presentacion">
         <section class="presentacion__seccion">
             <h1 class="presentacion__seccion__titulo">Encriptador/Desencriptador de Texto</h1>
@@ -18,11 +20,12 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
                 </svg>
-                <p class="presentacion__seccion__advertencia__parrafo">Solo letras minúsculas y sin acentos</p>
+                <p class="presentacion__seccion__advertencia__parrafo">Solo letras minúsculas, sin acentos y sin caracteres especiales</p>
             </div>
             <div class="presentacion__seccion__botones">
                 <button class="presentacion__seccion__botones__encriptar" id="encriptar" onclick="encriptar();">Encriptar</button>
                 <button class="presentacion__seccion__botones__desencriptar" id="desencriptar" onclick="desencriptar();">Desencriptar</button>
+                <button class="presentacion__seccion__botones__borrar" id="borrar" onclick="borrar();">Borrar</button>
             </div>
         </section>
 

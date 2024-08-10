@@ -11,19 +11,19 @@ function validarTexto(info) {
     let validacion = true;
     if (info === "") {
         //Validar campo vacío
-        swal("Error", "Ingrese algún texto por favor", "error");
+        swal("Cuidado", "Ingrese algún texto por favor", "warning");
         return validacion = false;
     } else if (info.match(letrasMayusculas)) {
         //Validar letras mayúsculas
-        swal("Error", "Debe ser texto en minúsculas", "error");
+        swal("Cuidado", "Debe ser texto en minúsculas", "warning");
         return validacion = false;
     } else if (info.match(caracteresEspeciales)) {
         //Validar caracteres especiales
-        swal("Error", "Debe ser texto sin caracteres especiales", "error");
+        swal("Cuidado", "Debe ser texto sin caracteres especiales", "warning");
         return validacion = false;
     } else if (info.match(acentos)) {
         //Validar acentos tanto en mayúsculas como en minúsculas
-        swal("Error", "Debe ser texto sin acentos", "error");
+        swal("Cuidado", "Debe ser texto sin acentos", "warning");
         return validacion = false;
     } else {
         swal("Exitoso", "Texto correcto", "success");
@@ -57,10 +57,9 @@ function encriptar() {
         mensaje3 = mensaje2.replace(/o/g, "ober");
         mensaje4 = mensaje3.replace(/u/g, "ufat");
         nuevoTexto.innerHTML = mensaje4;
-        texto.value = "";
-        quitarImagenParrafos()
+        quitarImagenParrafos();
     }
-    return
+    return;
 }
 
 //Función para desencriptar el texto
@@ -75,15 +74,12 @@ function desencriptar() {
         mensaje3 = mensaje2.replace(/ober/g, "o");
         mensaje4 = mensaje3.replace(/ufat/g, "u");
         nuevoTexto.innerHTML = mensaje4;
-        texto.value = "";
-        quitarImagenParrafos()
+        quitarImagenParrafos();
     }
     return;
 }
 
 //Función para el texto del elemento nuevoTexto
-function copiar() {
-    navigator.clipboard.writeText(nuevoTexto.textContent);
-    swal("Listo", "Texto copiado", "success");
-    return;
-}
+function copiar() { navigator.clipboard.writeText(nuevoTexto.textContent); swal("Listo", "Texto copiado", "success"); return;}
+
+function borrar() {texto.value = "";}

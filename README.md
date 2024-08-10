@@ -35,5 +35,5 @@ También hay un botón Copiar para copiar y guardar en el portapapeles la frase 
 
 **Responsividad:**
 - **Desktop:** Listo.
-- **Tablet:** En construcción.
-- **Celular:** En construcción.
+- **Tablet:** Listo.
+- **Celular:** Listo.
