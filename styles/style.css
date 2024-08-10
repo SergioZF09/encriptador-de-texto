@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     /*Colores*/
@@ -8,7 +8,6 @@
     --color-gray: #495057;
     --color-beige: #E2E2B6;
     /*Fuentes de letras*/
-    --font-family-CrimsonPro: 'Crimson Pro', sans-serif;
     --font-family-Montserrat: 'Montserrat', sans-serif;
 }
 
@@ -27,14 +26,14 @@ body{
 }
 
 .encabezado{
-    padding: 20px 20px 20px 0;
+    padding: 2% 2% 2% 0;
 }
 
 .presentacion{
     display: flex;
     justify-content: center;
     gap:  50px;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .presentacion__seccion{
@@ -46,13 +45,13 @@ body{
 .presentacion__seccion__titulo{
     text-align: center;
     margin-bottom: 3rem;
-    font-family: var(--font-family-CrimsonPro);
+    /* font-family: var(--font-family-CrimsonPro); */
 }
 
 .presentacion__seccion__areaTexto{
     height: 95%;
     background: var(--color-lightBlue);
-    font-size: 16px;
+    font-size: 1rem;
     font-family: var(--font-family-Montserrat);
     font-weight: 500;
     border: none;
@@ -68,48 +67,50 @@ body{
 .presentacion__seccion__advertencia{
     display: flex;
     gap: 8px;
-    margin: 5px 0;
+    margin: 0.3rem 0;
 }
 
 .presentacion__seccion__advertencia__parrafo{
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
 }
 
 .presentacion__seccion__botones{
-    height: 67px;
+    height: 12%;
     display: flex;
     justify-content: center;
     gap: 24px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .presentacion__seccion__botones__encriptar,
-.presentacion__seccion__botones__desencriptar{
-    width: 328px;
-    height: 67px;
+.presentacion__seccion__botones__desencriptar,
+.presentacion__seccion__botones__borrar{
+    width: 30%;
     background: var(--color-white);
     color: var(--color-black);
     border-radius: 24px;
     cursor: pointer;
     font-family: var(--font-family-Montserrat);
     font-weight: 600;
+    transition: 0.3s;
 }
 
 .presentacion__seccion__botones__encriptar:hover,
 .presentacion__seccion__botones__desencriptar:hover,
-.presentacion__apartado__boton__copiar:hover{
+.presentacion__seccion__botones__borrar:hover{
     background: var(--color-black);
     color: var(--color-white);
     border-color: var(--color-white);
-    transition: .30s;
+    transform: scale(1.06);
+    transition: .3s;
 }
 
 .presentacion__apartado{
     background: var(--color-white);
     width: 30%;
     height: 50%;
-    padding: 20px 24px;
+    padding: 1.5% 1.7%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -120,40 +121,49 @@ body{
 .presentacion__apartado__areaTexto{
     background: var(--color-white);
     height: 25%;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: var(--font-family-Montserrat);
     border: none;
     outline: none;
 }
 
 .presentacion__apartado__parrafos{
-    margin: 32px;
+    margin: 2rem;
 }
 
 .presentacion__apartado__parrafos__parrafo1{
     color: var(--color-gray);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 16px;
-    margin-top: 32px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .presentacion__apartado__parrafos__parrafo2{
     color: var(--color-gray);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
 .presentacion__apartado__boton__copiar{
-    width: 328px;
-    height: 50px;
+    width: 100%;
+    padding: 4% 0;
     background: var(--color-white);
     color: var(--color-black);
     border-radius: 24px;
     cursor: pointer;
     font-family: var(--font-family-Montserrat);
     font-weight: 600;
-    margin-top: 80px;
+    margin-top: 5rem;
+    transition: 0.3s;
+}
+
+.presentacion__apartado__boton__copiar:hover{
+    background: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-white);
+    transform: scale(1.06);
+    transition: .3s;
 }
 
 .footer{
@@ -173,6 +183,12 @@ body{
 
 .footer__enlaces__link{
     color: var(--color-black);
+    transition: 0.3s;
+}
+
+.footer__enlaces__link:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -184,16 +200,18 @@ body{
 
     .presentacion__seccion{
         width: 95%;
-        margin-bottom: 100px;
+        margin-bottom: 6.2rem;
     }
 
     .presentacion__seccion__advertencia{
-        margin: 10px 0;
+        margin: 0.625rem 0;
     }
 
     .presentacion__seccion__botones__encriptar,
-    .presentacion__seccion__botones__desencriptar{
-        width: 332px;
+    .presentacion__seccion__botones__desencriptar,
+    .presentacion__seccion__botones__borrar{
+        width: 30%;
+        padding: 3.3% 0;
     }
 
     .presentacion__apartado{
@@ -210,8 +228,8 @@ body{
     }
     
     .presentacion__apartado__boton__copiar{
-        width: 624px;
-        margin-top: 32px;
+        width: 100%;
+        margin-top: 2rem;
     }
 
 }
@@ -225,11 +243,11 @@ body{
 
     .presentacion__seccion{
         width: 95%;
-        margin-bottom: 100px;
+        margin-bottom: 6.2rem;
     }
 
     .presentacion__seccion__advertencia{
-        margin: 15px 0;
+        margin: 0.95rem 0;
     }
 
     .presentacion__seccion__botones{
@@ -239,14 +257,20 @@ body{
     }
 
     .presentacion__seccion__botones__encriptar,
-    .presentacion__seccion__botones__desencriptar{
-        width: 343px;
-        height: 67px;
+    .presentacion__seccion__botones__desencriptar,
+    .presentacion__seccion__botones__borrar{
+        width: 47.2%;
+        padding: 3.3% 0;
     }
 
     .presentacion__apartado{
-        width: 44%;
+        width: 85%;
         height: 18.6%;
+        border-radius: 24px;
+    }
+
+    .presentacion__apartado__areaTexto{
+        border-radius: 10px;
     }
 
     .presentacion__apartado__parrafos__imagen{
@@ -258,14 +282,18 @@ body{
     }
 
     .presentacion__apartado__boton__copiar{
-        width: 279px;
-        margin-top: 32px;
+        width: 100%;
+        margin-top: 2rem;
     }
 
     .footer{
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+
+    .footer__parrafo{
+        text-align: center;
     }
 
 }
