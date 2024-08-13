@@ -56,6 +56,7 @@ body{
     font-weight: 500;
     border: none;
     outline: none;
+    resize: none;
 }
 
 .presentacion__seccion__areaTexto::placeholder{
@@ -125,6 +126,7 @@ body{
     font-family: var(--font-family-Montserrat);
     border: none;
     outline: none;
+    resize: none;
 }
 
 .presentacion__apartado__parrafos{
