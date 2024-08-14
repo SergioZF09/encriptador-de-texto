@@ -1,6 +1,9 @@
 const texto = document.getElementById("texto");
 const nuevoTexto = document.getElementById("nuevoTexto");
 const btnCopiar = document.querySelector("#copiar");
+const btnEncriptar = document.querySelector("#encriptar");
+const btnDesencriptar = document.querySelector("#desencriptar");
+const btnBorrar = document.querySelector("#borrar");
 
 //Valida el campo texto
 function validarTexto(info) {
@@ -32,7 +35,7 @@ function validarTexto(info) {
 }
 
 //Función para eliminar imagen y párrafos
-function quitarImagenParrafos() {
+function modificarDisenio() {
     //Elimina la imagen
     document.getElementById("imagenParrafos").style.display = "none";
     //Da altura al elemento apartado
@@ -42,6 +45,10 @@ function quitarImagenParrafos() {
     //Eliminan atributo hidden de nuevoTexto y botón copiar
     nuevoTexto.removeAttribute("hidden");
     btnCopiar.removeAttribute("hidden");
+    //Modifica el tamaño de los botones encriptar, desencriptar y borrar
+    btnEncriptar.style.height = "180%";
+    btnDesencriptar.style.height = "180%";
+    btnBorrar.style.height = "180%";
     return;
 }
 
@@ -57,7 +64,7 @@ function encriptar() {
         mensaje3 = mensaje2.replace(/o/g, "ober");
         mensaje4 = mensaje3.replace(/u/g, "ufat");
         nuevoTexto.innerHTML = mensaje4;
-        quitarImagenParrafos();
+        modificarDisenio();
     }
     return;
 }
@@ -74,7 +81,7 @@ function desencriptar() {
         mensaje3 = mensaje2.replace(/ober/g, "o");
         mensaje4 = mensaje3.replace(/ufat/g, "u");
         nuevoTexto.innerHTML = mensaje4;
-        quitarImagenParrafos();
+        modificarDisenio();
     }
     return;
 }
