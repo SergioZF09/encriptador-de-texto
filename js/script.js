@@ -1,5 +1,6 @@
 const texto = document.getElementById("texto");
 const nuevoTexto = document.getElementById("nuevoTexto");
+const apartado = document.getElementById("apartado");
 const btnCopiar = document.querySelector("#copiar");
 const btnEncriptar = document.querySelector("#encriptar");
 const btnDesencriptar = document.querySelector("#desencriptar");
@@ -39,7 +40,7 @@ function modificarDisenio() {
     //Elimina la imagen
     document.getElementById("imagenParrafos").style.display = "none";
     //Da altura al elemento apartado
-    document.getElementById("apartado").style.height = "80%";
+    apartado.style.height = "80%";
     //Da altura al elemento nuevoTexto
     nuevoTexto.style.height = "80%";
     //Eliminan atributo hidden de nuevoTexto y botón copiar
