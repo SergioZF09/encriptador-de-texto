@@ -1,6 +1,7 @@
 const texto = document.getElementById("texto");
 const nuevoTexto = document.getElementById("nuevoTexto");
 const apartado = document.getElementById("apartado");
+const imagenParrafos = document.getElementById("imagenParrafos");
 const btnCopiar = document.querySelector("#copiar");
 const btnEncriptar = document.querySelector("#encriptar");
 const btnDesencriptar = document.querySelector("#desencriptar");
@@ -38,7 +39,7 @@ function validarTexto(info) {
 //Función para eliminar imagen y párrafos
 function modificarDisenio() {
     //Elimina la imagen
-    document.getElementById("imagenParrafos").style.display = "none";
+    imagenParrafos.style.display = "none";
     //Da altura al elemento apartado
     apartado.style.height = "80%";
     //Da altura al elemento nuevoTexto
